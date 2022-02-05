@@ -16,5 +16,12 @@ pipeline{
         sh "echo unit"
         }
     }
+        post{
+            always{
+                //Execute everytime
     }
+            success{
+                sh "echo success"
+            }
 }
+    }
