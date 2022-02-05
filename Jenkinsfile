@@ -1,6 +1,12 @@
+CODE_CHANGES = getChanges()
 pipeline{
     
     agent any
+    
+    tools{
+        maven 'Maven'
+    
+    }
     
     stages{
         
@@ -12,13 +18,13 @@ pipeline{
         
     stage("code build"){
         steps{
-        bat "echo build"
+        bat "mvn clean"
         }
     }
         
     stage("Unit Testing"){
         steps{
-        bat "echo unit"
+        bat "mvn test"
         }
     }
     }
