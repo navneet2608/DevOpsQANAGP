@@ -6,26 +6,26 @@ pipeline{
         
     stage("code checkout"){
         steps{
-            sh "echo hello"
+            bat "echo hello"
         }
     }
         
     stage("code build"){
         steps{
-        sh "echo build"
+        bat "echo build"
         }
     }
         
     stage("Unit Testing"){
         steps{
-        sh "echo unit"
+        bat "echo unit"
         }
     }
     }
         
         post{
             success{
-                sh "echo success"
+                bat "echo success"
             }
     }
 }
