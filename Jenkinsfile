@@ -6,7 +6,7 @@ pipeline{
         
     stage("code checkout"){
         steps{
-            system.out.println("Hello")
+            sh "echo hello"
         }
     }
         
